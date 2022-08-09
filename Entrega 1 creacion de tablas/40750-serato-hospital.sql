@@ -5,7 +5,7 @@ CREATE TABLE IF NOT EXISTS patient (
 	patient_id int not null auto_increment,
     patient_dni int not null,
     patient_name varchar(10) not null,
-    patient_last_name varchar(10) not null,
+    patient_last_name varchar(20) not null,
     patient_social_work varchar(10) not null,
 	patient_social_work_number int not null,
 	patient_phone varchar(20) not null,
@@ -16,8 +16,8 @@ CREATE TABLE IF NOT EXISTS patient (
 
 CREATE TABLE IF NOT EXISTS hospital (
     hospital_id INT NOT NULL AUTO_INCREMENT,
-    hospital_name VARCHAR(20) not null,
-    hospital_address VARCHAR(20) not null,
+    hospital_name VARCHAR(50) not null,
+    hospital_address VARCHAR(50) not null,
     hospital_contact INT not null,
     PRIMARY KEY (hospital_id)
 );
@@ -56,8 +56,8 @@ CREATE TABLE IF NOT EXISTS medicine(
     medicine_price int not null,
     medicine_dosage int not null,
     medicine_days int not null,
-    medicine_name varchar(20) not null,
-    medicine_type varchar(20) not null,
+    medicine_name varchar(50) not null,
+    medicine_type varchar(50) not null,
     primary key(medicine_id)
 );
 
@@ -66,7 +66,7 @@ CREATE TABLE IF NOT EXISTS treatment(
     medicine_id int not null,
     patient_id int not null,
     doctor_id int not null,
-    treatment varchar(200) ,
+    treatment varchar(500) ,
     treatment_status bit not null,
     primary key(treatment_id)
 );

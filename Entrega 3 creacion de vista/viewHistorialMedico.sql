@@ -1,0 +1,1 @@
+SELECT * FROM hospital.historial_medico;
