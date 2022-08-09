@@ -100,12 +100,3 @@ ADD foreign key (room_id) references room(room_id);
 ALTER TABLE room 
 ADD  foreign key (hospital_id) references hospital(hospital_id);
 
-INSERT INTO patient values(null,43515134,"Ariel","Serato","osde",1234567890,1122535767,"Hombre","Monte grande"),
-							(null,43515134,"Ariel","Serato","osde",1234567890,1122535767,"Hombre","Monte grande");
-INSERT INTO hospital values(null,"Clinica monte grande","las heras 292",123456789);
-INSERT INTO room values(null,1,"Consultorio");
-INSERT INTO doctor values(null,1,"Juan","Perez","Dermatologo",123456789,"Hombre","Calle falsa 123");
-INSERT INTO medicine values(null,100,2,30,"Tafirol","Antifrebril");
-INSERT INTO treatment values(null,1,1,1,"Tomar la medicina cada 24 horas y permanecer en cama",1);
-INSERT INTO medical_history values(null,1,1,1,"Fiebre Alta",1);
-INSERT INTO appointment values(null,1,1,NOW(),"2022-08-20 12:00:00");
