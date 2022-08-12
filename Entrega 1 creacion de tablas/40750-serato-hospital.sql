@@ -92,7 +92,8 @@ ADD    foreign key (patient_id) references patient(patient_id);
 ALTER TABLE medical_history
 ADD    foreign key (patient_id) references patient(patient_id),
 ADD    foreign key (doctor_id) references doctor(doctor_id),
-ADD    foreign key (hospital_id) references hospital(hospital_id);
+ADD    foreign key (hospital_id) references hospital(hospital_id),
+ADD		foreign key (treatment_id) references treatment(treatment_id) on delete cascade;
 
 ALTER TABLE doctor
 ADD foreign key (room_id) references room(room_id);
