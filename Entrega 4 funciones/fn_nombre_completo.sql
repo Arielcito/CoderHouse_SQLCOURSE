@@ -1,3 +1,5 @@
+USE HOSPITAL;
+DELIMITER //
 CREATE DEFINER=`root`@`localhost` FUNCTION `complete_name`(Nombre varchar(20),Apellido varchar(20)) RETURNS char(100) CHARSET utf8mb4
     DETERMINISTIC
 BEGIN
@@ -5,3 +7,5 @@ BEGIN
     set complete_name = concat(Apellido,', ',Nombre);
 RETURN complete_name;
 END
+//
+DELIMITER ;

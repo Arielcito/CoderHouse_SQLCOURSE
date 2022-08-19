@@ -1,3 +1,5 @@
+USE HOSPITAL;
+DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `treatment_status`()
 BEGIN
 	declare finished_treatment varchar(100);
@@ -6,3 +8,5 @@ BEGIN
     execute runSQL;
     deallocate prepare runSQL;
 END
+//
+DELIMITER ;
